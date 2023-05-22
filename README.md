@@ -8,7 +8,7 @@
 </div>
 
 <p align="center">
-  <img src="./assets/main_fig.png" width="50%">
+  <img src="./assets/main_fig.png" width="70%">
   <br />
   <span>Figure 1: Qualitative results of our method, Selective Amnesia (SA). SA can be applied to a variety
 of models, from forgetting textual prompts such as specific celebrities or nudity in text-to-image
