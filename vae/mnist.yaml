@@ -1,0 +1,8 @@
+dataset: MNIST
+
+# MLP model parameters
+x_dim: 784
+h_dim1: 512
+h_dim2: 256
+z_dim: 8
+
