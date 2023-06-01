@@ -26,7 +26,7 @@ We consider forgetting the celebrity Brad Pitt in the following steps.
     ```
     The images will be stored in the folder `fim_dataset`.
 
-2. Calculate the FIM.
+2. Calculate the FIM (can take a long time, for precomputed FIM see [below](#checkpoints-and-pre-computed-fim).
     ```
     python main_fim.py -t --base configs/stable-diffusion/fim.yaml --gpus "0,1,2,3" --num_nodes 1 --finetune_from sd-v1-4-full-ema.ckpt --n_chunks 20
     ```
@@ -69,5 +69,15 @@ We consider forgetting the celebrity Brad Pitt in the following steps.
     max_epochs: 200
     ...
     ```
+
+# Checkpoints and Pre-computed FIM
+
+We release the pretrained checkpoints and precomputed FIM [here](https://huggingface.co/ajrheng/selective-amnesia/tree/main). You may use the checkpoints with `scripts/txt2img.py` for image generation right away. 
+
+The FIM is calculated for SD v1.4 and can be used for your own training for SA. Download into the base `sd` folder as follows
+```
+wget https://huggingface.co/ajrheng/selective-amnesia/blob/main/full_fisher_dict.pkl
+```
+and you can skip step 2 above. 
 
 # COMING SOON: NudeNet and GIPHY Celebrity Detector
