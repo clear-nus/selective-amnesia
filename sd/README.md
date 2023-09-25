@@ -80,4 +80,37 @@ wget https://huggingface.co/ajrheng/selective-amnesia/blob/main/full_fisher_dict
 ```
 and you can skip step 2 above. 
 
-# COMING SOON: NudeNet and GIPHY Celebrity Detector
+# Evaluation
+
+## NudeNet 
+First generate the images from the I2P dataset. 
+```
+python scripts/txt2img_i2p.py --ckpt path/to/trained/checkpoint --outdir path/to/outdir
+```
+
+Then run the NudeNet evaluation
+```
+python nudenet_evaluator.py path/to/outdir
+```
+The statistics of the relevant nudity concepts will be printed to screen.
+
+## GIPHY Celebrity Detector
+First generate the images to be evaluated. To replicate the Brad Pitt experiments, run
+```
+python scripts/txt2img_from_file.py --ckpt path/to/trained/checkpoint --outdir path/to/outdir --from-file brad_pitt_prompts.txt 
+```
+
+Next, clone the [GIPHY Celebrity Detector](https://github.com/Giphy/celeb-detection-oss) and follow the [official installation instructions](https://github.com/Giphy/celeb-detection-oss/tree/master/examples).
+
+You will need to replace two files in your cloned repo:
+```
+examples/inference.py
+model_training/helpers/face_recognizer.py
+```
+with those provided in `modified-celeb-detection-oss`. 
+
+Then run evaluation
+```
+python examples/inference.py --image_folder path/to/outdir --celebrity "brad_pitt"
+```
+The statistics will be printed to screen.
