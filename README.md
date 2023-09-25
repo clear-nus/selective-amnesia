@@ -4,6 +4,7 @@
 
 [![preprint](https://img.shields.io/static/v1?label=arXiv&message=2301.11308&color=B31B1B)](https://arxiv.org/abs/2305.10120)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Venue:NeurIPS 2023](https://img.shields.io/badge/Venue-NeurIPS%202023-007CFF)](https://nips.cc/)
 
 </div>
 
@@ -16,7 +17,7 @@ models to discrete classes in VAEs and diffusion models (DDPM).</span>
 </p>
 
 
-This is the official code repository for [Selective Amnesia: A Continual Learning Approach for Forgetting in Deep Generative Models](https://arxiv.org/abs/2305.10120).
+This is the official code repository for the NeurIPS 2023 Spotlight paper [Selective Amnesia: A Continual Learning Approach for Forgetting in Deep Generative Models](https://arxiv.org/abs/2305.10120).
 
 The code is split into three subfolders, one each for VAE, DDPM and Stable Diffusion experiments. Detailed instructions are included in the respective subfolders.
 
