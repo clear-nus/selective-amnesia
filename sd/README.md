@@ -76,7 +76,7 @@ We release the pretrained checkpoints and precomputed FIM [here](https://hugging
 
 The FIM is calculated for SD v1.4 and can be used for your own training for SA. Download into the base `sd` folder as follows
 ```
-wget https://huggingface.co/ajrheng/selective-amnesia/blob/main/full_fisher_dict.pkl
+wget https://huggingface.co/ajrheng/selective-amnesia/resolve/main/full_fisher_dict.pkl
 ```
 and you can skip step 2 above. 
 
